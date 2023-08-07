@@ -251,13 +251,11 @@ PS：ChatGLM微调时所用显存要比ChatGLM2多，详细显存占比如下：
 
 
 ### Lora方法
-Lora方法，即在大型语言模型上对指定参数（权重矩阵）并行增加额外的低秩矩阵，并在模型训练过程中，仅训练额外增加的并行低秩矩阵的参数。
-当“秩值”远小于原始参数维度时，新增的低秩矩阵参数量也就很小。在下游任务tuning时，仅须训练很小的参数，但能获取较好的表现结果。
+
+Lora方法，即在大型语言模型上对指定参数（权重矩阵）增加额外的低秩矩阵，并在模型训练过程中，仅训练额外增加的低秩矩阵的参数。
+当“秩值”远小于原始参数维度时，新增的低秩矩阵参数量也很小。在下游任务tuning时，仅须训练很小的参数，但能获取较好的表现结果。
 
 ![](images/Lora.png)
-- 论文：[paper](https://arxiv.org/abs/2106.09685)
-- 官方代码：[Github](https://github.com/microsoft/LoRA)
-- HuggingFace封装的peft库：[Github](https://github.com/huggingface/peft)
 
 微调代码，见train.py，核心部分如下：
 ```python3
@@ -533,3 +531,9 @@ PS：ChatGLM微调时所用显存要比ChatGLM2多，详细显存占比如下：
 ## 参考
 
 [1] [liucongg/ChatGLM-Finetuning](https://github.com/liucongg/ChatGLM-Finetuning)
+
+[2] [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+
+[3] [LoRA 官方代码](https://github.com/microsoft/LoRA)
+
+[4] [HuggingFace封装的peft库](https://github.com/huggingface/peft)
