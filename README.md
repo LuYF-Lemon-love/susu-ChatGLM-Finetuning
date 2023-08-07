@@ -4,16 +4,6 @@
 
 本项目支持单卡训练&多卡训练，由于采用单指令集方式微调，模型微调之后**并没有出现严重的灾难性遗忘**。
 
-由于官方代码和模型一直在更新，目前代码和模型使用的是最新版本（20230806）。
-
-PS：没有用Trainer（虽然Trainer代码简单，但不易修改，大模型时代算法工程师本就成为了数据工程师，因此更需了解训练流程）
-
-## 更新简介
-- update-2023.08.06 代码和模型已经更新到最新，支持单卡&多卡训练，支持ChatGLM2模型训练、支持全量参数训练，所有代码进行了结构增加可读性。
-- update-2023.06.12 [**增加流水线并行训练方法**](https://zhuanlan.zhihu.com/p/636488690)，请看[v0.1 Tag](https://github.com/liucongg/ChatGLM-Finetuning/tree/v0.1)
-- update-2023.04.18 **增加文本生成任务评测**，请看[v0.1 Tag](https://github.com/liucongg/ChatGLM-Finetuning/tree/v0.1)
-- update-2023.04.05 **增加信息抽取任务评测**，请看[v0.1 Tag](https://github.com/liucongg/ChatGLM-Finetuning/tree/v0.1)
-
 ## 微调方法
 模型微调时，如果遇到显存不够的情况，可以开启gradient_checkpointing、zero3、offload等参数来节省显存。
 
@@ -539,3 +529,7 @@ PS：ChatGLM微调时所用显存要比ChatGLM2多，详细显存占比如下：
 
 ## Star History
 ![Star History Chart](https://api.star-history.com/svg?repos=liucongg/ChatGLM-Finetuning&type=Date)
+
+## 参考
+
+[1] [liucongg/ChatGLM-Finetuning](https://github.com/liucongg/ChatGLM-Finetuning)
