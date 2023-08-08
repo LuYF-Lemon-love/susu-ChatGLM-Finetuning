@@ -4,6 +4,18 @@
 
 本项目支持单卡训练&多卡训练，由于采用单指令集方式微调，模型微调之后**并没有出现严重的灾难性遗忘**。
 
+## 环境搭建
+
+```shell
+$ git clone git@github.com:LuYF-Lemon-love/susu-ChatGLM-Finetuning.git
+$ cd susu-ChatGLM-Finetuning
+$ python -m venv env
+$ source env/bin/activate
+$ which python
+$ pip install --upgrade pip
+$ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
 ## 微调方法
 模型微调时，如果遇到显存不够的情况，可以开启gradient_checkpointing、zero3、offload等参数来节省显存。
 
